@@ -1,6 +1,7 @@
 <<<<<<< HEAD
-# R
-R用来画图、建模
+
+R 数据类型、方法、作图
+向量、序列、矩阵、数据框
 
 函数数据类型：
 
@@ -98,5 +99,62 @@ R用来画图、建模
 	[2,]    3    1
 	[3,]    2    3
 
+	cbind()rbind()列/行连接矩阵
 	
+	> x1<-c(1,2,3,4)
+	> x2<-c(5,6,7,8)
+	
+	> data<-cbind(x1,x2)
+	> data
+    	 x1 x2
+	[1,]  1  5
+	[2,]  2  6
+	[3,]  3  7
+	[4,]  4  8
+	> data<-rbind(x1,x2)
+	> data
+   		[,1] [,2] [,3] [,4]
+	x1    1    2    3    4
+	x2    5    6    7    8
 
+	data.frame()数据框相当于表
+
+	> x1<-data.frame(name=c("tom","jary","rose","jim"),age=c(12,12,14,15))
+	> x1
+	  name age
+	1  tom  12
+	2 jary  12
+	3 rose  14
+	4  jim  15
+	对数据框中的元素进行操作
+	> x1$name
+	[1] tom  jary rose jim 
+	Levels: jary jim rose tom
+
+	attach()detach()挂接/卸载挂接
+	
+	挂接以后可以直接操作数据框中的元素
+	> attach(x1)
+	> name
+	[1] tom  jary rose jim 
+	Levels: jary jim rose tom
+	> age
+	[1] 12 12 14 15
+
+	不想挂接时卸载挂接
+	> detach(x1)
+	> name
+	错误: 找不到对象'name'
+
+	read.table()读取文件中的内容
+
+	> data<-read.table("blood.txt",header=T)
+
+	
+R做图
+
+	plot()
+
+	plot(a,b,xlab="单价",ylab="利润",type="h",main="单间-利润散点图")
+
+	boxplot()箱线图
