@@ -22,6 +22,6 @@
 >
 > summary(model)
 >
-> ![2020-02-03_162644](C:\Users\wangbo\Desktop\2020-02-03_162644.jpg)
+> ![https://github.com/user-wbgithub/R/blob/master/images/2020-02-03_162644.jpg)
 >
 > 
